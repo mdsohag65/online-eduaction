@@ -27,7 +27,6 @@
 
 html {
     font-size: 62.5%;
-    overflow: hidden;
     scroll-behavior: smooth;
     scroll-padding-top: 8rem;
 }
@@ -117,7 +116,7 @@ section {
 .home .row {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     gap: 1.5rem;
 }
 
@@ -145,9 +144,38 @@ section {
     color: #00E77F;
 }
 
+.count .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 1.5rem;
+    align-items: flex-start;
+}
 
+.count .box-container .box {
+    background-color: var(--light-bg);
+    border-radius: .5rem;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
 
+.count .box-container .box i {
+    font-size: 5rem;
+    color: var(--green);
+}
 
+.count .box-container .box .content h3 {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.count .box-container .box .content p {
+    font-size: 1.6rem;
+    color: var(--light-white);
+    margin-bottom: .5rem;
+}
 
 
 
@@ -159,6 +187,10 @@ section {
 @media (max-width:991px) {
     html {
         font-size: 55%;
+    }
+
+    .home .row .content h3 {
+        font-size: 8rem;
     }
 }
 
@@ -189,6 +221,10 @@ section {
     .header .flex .navbar a {
         display: block;
         margin: 2rem;
+    }
+
+    .home .row .content h3 {
+        font-size: 6rem;
     }
 }
 
